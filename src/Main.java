@@ -9,12 +9,12 @@ public class Main {
         //You must write an algorithm that runs in O(n) time.
 
         int[] nums = {100, 4, 200, 1, 3, 2};
-        Solution sol = new Solution(); // Agora é possível criar a instância
+        Solution sol = new Solution();
         int resultado = sol.longestConsecutive(nums);
         System.out.println("Maior sequência consecutiva: " + resultado);
     }
 
-    static class Solution { // Tornando a classe estática
+    static class Solution {
         public int longestConsecutive(int[] nums) {
             if (nums == null || nums.length == 0) {
                 return 0;
@@ -28,7 +28,7 @@ public class Main {
             int maiorSequencia = 0;
 
             for (int num : set) {
-                if (!set.contains(num - 1)) { // Se não há um número menor antes dele
+                if (!set.contains(num - 1)) {
                     int atual = num;
                     int sequenciaAtual = 1;
 
